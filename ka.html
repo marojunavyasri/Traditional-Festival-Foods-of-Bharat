@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Karnataka</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ff7043;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #d84315;
+    }
+
+    p, li {
+      font-size: 18px;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 420px;
+      height: 300px;
+      perspective: 1000px;
+      margin: 20px auto;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .flip-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .flip-card-back {
+      background-color: #ffe0b2;
+      transform: rotateY(180deg);
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 16px;
+      color: #4e342e;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .speech-controls button {
+      font-size: 14px;
+      margin-left: 5px;
+      background-color: #ffccbc;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .speech-controls button:hover {
+      background-color: #ffab91;
+    }
+
+    a button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #ff7043;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 30px 0;
+    }
+
+    a button:hover {
+      background-color: #e64a19;
+    }
+
+    /* Popup Modal */
+    #festivalModal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    #festivalModal .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 10px;
+      color: #333;
+    }
+
+    #festivalModal .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #festivalModal .close:hover,
+    #festivalModal .close:focus {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div id="google_translate_element" style="float:right; margin: 10px;"></div>
+  <header>
+    <h1>Traditional festival food of Karnataka</h1>
+  </header>
+  <section>
+    <div class="image container">
+      <div class="image-info">
+        <h2 style="text-align:center">Ugadi</h2>
+        <p>Ugadi is new year's day according to Hindu calendar. The first day of each year is called 'Ugadi'. The word Ugadi can be split into two — Uga means Course of stars and Adi means Starting. The day is observed by drawing colourful patterns on the floor called Muggulu, mango leaf decorations on doors called torana, buying and giving gifts such as new clothes, giving charity to the poor, oil massages followed by special baths, preparing and sharing a special food called pachadi.</p>
+
+        <!-- Image with Popup -->
+        <center>
+          <img src="https://nriol.com/images/ugadi2a.jpg"
+               height="300" width="420"
+               alt="Ugadi Festival"
+               style="cursor:pointer;"
+               onclick="document.getElementById('festivalModal').style.display='block'">
+        </center>
+
+        <!-- Modal Popup -->
+        <div id="festivalModal">
+          <div class="modal-content">
+            <span class="close" onclick="document.getElementById('festivalModal').style.display='none'">&times;</span>
+            <h2 style="color:#d84315;">Significance of Ugadi Festival</h2>
+            <p>
+              Ugadi marks the beginning of a new year in Karnataka and other southern states. It symbolizes the cycle of life, filled with emotions of joy, sorrow, anger, fear, disgust, and surprise—represented in the six tastes of the Ugadi Pachadi. It reminds people to embrace all aspects of life with balance and gratitude. The festival is associated with renewal, cleanliness, charity, and hope for a prosperous year ahead.
+            </p>
+          </div>
+        </div>
+
+        <h2>The traditional food prepared during Ugadi is:</h2>
+        <h2>Ugadi Pachadi</h2>
+        <p>Ugadi pachadi is a special food prepared during Ugadi. The pachadi is a notable festive food that combines all flavors – sweet, sour, salty, bitter, astringent and piquant. In Telugu and Kannada Hindu traditions, it is a symbolic reminder that one must expect all flavors of experiences in the coming new year and make the most of them.</p>
+
+        <!-- ✅ Flip card for food image -->
+        <center>
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://www.sailusfood.com/wp-content/uploads/ugadi_pachadi_andhra_traditional_sweet_bitter_chutney.JPG" alt="Ugadi Pachadi">
+              </div>
+              <div class="flip-card-back">
+                <div>
+                  <strong>Ugadi Pachadi (~150g serving):</strong><br>
+                  • Calories: 180 kcal<br>
+                  • Carbs: 38 g<br>
+                  • Protein: 2 g<br>
+                  • Fat: 3 g<br>
+                  • Fiber: 2 g
+                </div>
+              </div>
+            </div>
+          </div>
+        </center>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li>Neem flowers</li>
+          <li>Raw mango</li>
+          <li>Jaggery</li>
+          <li>Pepper powder</li>
+          <li>Coconut and salt</li>
+          <li>Tamarind</li>
+        </ul>
+
+        <h2>Significance</h2>
+        <p>Ugadi pachadi is a mixture that has six different tastes — sweet, sour, salt, pungent, spice and bitter. It signifies that life is a mixture of happiness, sadness, anger, disgust, fear and surprise. Sweet taste comes from jaggery and it symbolizes happiness.</p>
+
+        <center><a href="index.html"><button>Back</button></a></center>
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,te,kn,ta,ml,gu,bn,pa,or',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    let synth = window.speechSynthesis;
+    let currentUtterance = null;
+
+    function speakText(text) {
+      if (synth.speaking) synth.cancel();
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = 'en-IN';
+      synth.speak(currentUtterance);
+    }
+
+    function pauseSpeech() {
+      if (synth.speaking && !synth.paused) synth.pause();
+    }
+
+    function resumeSpeech() {
+      if (synth.paused) synth.resume();
+    }
+
+    function addSpeechButtons() {
+      const elements = document.querySelectorAll("p, li");
+      elements.forEach((el) => {
+        const container = document.createElement("span");
+        container.className = 'speech-controls';
+
+        const playBtn = document.createElement("button");
+        playBtn.innerText = "🔊 Listen";
+        playBtn.onclick = () => speakText(el.textContent);
+
+        const pauseBtn = document.createElement("button");
+        pauseBtn.innerText = "⏸ Pause";
+        pauseBtn.onclick = pauseSpeech;
+
+        const resumeBtn = document.createElement("button");
+        resumeBtn.innerText = "▶ Resume";
+        resumeBtn.onclick = resumeSpeech;
+
+        container.appendChild(playBtn);
+        container.appendChild(pauseBtn);
+        container.appendChild(resumeBtn);
+
+        el.parentNode.insertBefore(container, el.nextSibling);
+      });
+    }
+
+    window.onload = addSpeechButtons;
+  </script>
+</body>
+</html>
