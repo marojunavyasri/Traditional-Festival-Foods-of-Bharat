@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Manipur</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ff7043;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #d84315;
+    }
+
+    p, li {
+      font-size: 18px;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 420px;
+      height: 300px;
+      perspective: 1000px;
+      margin: 20px auto;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .flip-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .flip-card-back {
+      background-color: #ffe0b2;
+      transform: rotateY(180deg);
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 16px;
+      color: #4e342e;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .speech-controls button {
+      font-size: 14px;
+      margin-left: 5px;
+      background-color: #ffccbc;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .speech-controls button:hover {
+      background-color: #ffab91;
+    }
+
+    a button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #ff7043;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 30px 0;
+    }
+
+    a button:hover {
+      background-color: #e64a19;
+    }
+
+    /* Popup styling */
+    #yaosangModal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1000;
+      padding-top: 100px;
+    }
+
+    .modal-content {
+      background-color: white;
+      margin: auto;
+      padding: 30px;
+      border-radius: 12px;
+      max-width: 600px;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="google_translate_element" style="float:right; margin: 10px;"></div>
+  <header>
+    <h1>Traditional festival food of Manipur</h1>
+  </header>
+
+  <section>
+    <div class="image container">
+      <div class="image-info">
+        <h2 style="text-align:center">Yaosang</h2>
+        <p>Yaosang is a festival celebrated in Manipur for five days in spring, starting on the full moon day of the month of Lamda (February–March). Yaosang is indigenous traditions of the Meitei people. It is considered the most important festival in Manipur. But unlike Holi, the celebrations go far beyond just colours. Some recent trends during the festival of Yaoshang are music concerts, DJ and other forms of entertainment at open spaces. Local bands perform during such concerts.</p>
+
+        <!-- Popup Trigger -->
+        <center>
+          <img src="https://www.hlimg.com/images/events/738X538/r_1525669499e.jpg"
+               height="300" width="420"
+               style="cursor:pointer"
+               onclick="document.getElementById('yaosangModal').style.display='block'">
+        </center>
+
+        <!-- Modal Popup -->
+        <div id="yaosangModal">
+          <div class="modal-content">
+            <span class="close" onclick="document.getElementById('yaosangModal').style.display='none'">&times;</span>
+            <h2 style="color:#d84315;">Significance of Yaosang</h2>
+            <p style="font-size: 18px;">
+              Yaosang is one of the most important festivals of Manipur, observed to welcome spring and seek divine blessings. It blends traditional Meitei customs with Hindu influences and includes rituals, sports, music, and communal feasts. The celebration symbolizes unity, gratitude, and the joy of seasonal change, with children collecting donations and locals participating in vibrant cultural programs.
+            </p>
+          </div>
+        </div>
+
+        <h2>The Traditional festival food of Yaosang is:</h2>
+        <h2>kongsoi</h2>
+        <p>One of the most popular dishes during the Yaosang festival is the Kangsoi. Kangshoi, which means "mixed vegetables" in Manipuri, is a hearty and nutritious soup made with a medley of locally available vegetables, herbs, and spices. The soup is known for its simplicity and versatility, as it can be prepared with different combinations of vegetables based on seasonal availability. Traditionally made without any oil, it emphasises the use of clean flavours and nutritious vegetables for a healthy and hearty meal.</p>
+
+        <!-- Flip Card -->
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://foodiestreasure.files.wordpress.com/2022/12/ssdsc_0928.jpg?w=1000" alt="Kangsoi">
+            </div>
+            <div class="flip-card-back">
+              <div>
+                <strong>Kangsoi (1 bowl approx):</strong><br>
+                • Calories: 120 kcal<br>
+                • Carbs: 18 g<br>
+                • Protein: 4 g<br>
+                • Fat: 2 g<br>
+                • Rich in local herbs and veggies
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li>Potato</li>
+          <li>Onion</li>
+          <li>Tomato</li>
+          <li>Ginger</li>
+          <li>Garlic</li>
+          <li>Green Chilies</li>
+          <li>Dried Meat</li>
+          <li>Oil</li>
+          <li>Salt</li>
+        </ul>
+
+        <h2>Significance</h2>
+        <p>Beyond its deliciousness, Kangsoi carries cultural significance. It is a dish shared during festivals, celebrations, and community gatherings, reinforcing a sense of unity and cultural pride. The act of coming together to prepare and share Kangsoi is a testament to the importance of communal bonds in Manipuri culture.</p>
+
+        <center><a href="index.html"><button>Back</button></a></center>
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,te,kn,ta,ml,gu,bn,pa,or',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    let synth = window.speechSynthesis;
+    let currentUtterance = null;
+
+    function speakText(text) {
+      if (synth.speaking) synth.cancel();
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = 'en-IN';
+      synth.speak(currentUtterance);
+    }
+
+    function pauseSpeech() {
+      if (synth.speaking && !synth.paused) synth.pause();
+    }
+
+    function resumeSpeech() {
+      if (synth.paused) synth.resume();
+    }
+
+    function addSpeechButtons() {
+      const elements = document.querySelectorAll("p, li");
+      elements.forEach((el) => {
+        const container = document.createElement("span");
+        container.className = 'speech-controls';
+
+        const playBtn = document.createElement("button");
+        playBtn.innerText = "🔊 Listen";
+        playBtn.onclick = () => speakText(el.textContent);
+
+        const pauseBtn = document.createElement("button");
+        pauseBtn.innerText = "⏸ Pause";
+        pauseBtn.onclick = pauseSpeech;
+
+        const resumeBtn = document.createElement("button");
+        resumeBtn.innerText = "▶ Resume";
+        resumeBtn.onclick = resumeSpeech;
+
+        container.appendChild(playBtn);
+        container.appendChild(pauseBtn);
+        container.appendChild(resumeBtn);
+
+        el.parentNode.insertBefore(container, el.nextSibling);
+      });
+    }
+
+    window.onload = addSpeechButtons;
+  </script>
+</body>
+</html>
