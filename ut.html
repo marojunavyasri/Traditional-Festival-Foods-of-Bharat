@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Uttarakhand</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #ff7043;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #d84315;
+    }
+    p, li {
+      font-size: 18px;
+      color: #333;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .flip-card {
+      background-color: transparent;
+      perspective: 1000px;
+      margin: 10px auto;
+      width: 420px;
+      height: 300px;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .flip-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .flip-card-back {
+      background-color: #ffe0b2;
+      transform: rotateY(180deg);
+      padding: 20px;
+      font-size: 16px;
+      color: #4e342e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .speech-controls button {
+      font-size: 14px;
+      margin-left: 5px;
+      background-color: #ffccbc;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .speech-controls button:hover {
+      background-color: #ffab91;
+    }
+    a button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #ff7043;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 30px 0;
+    }
+    a button:hover {
+      background-color: #e64a19;
+    }
+
+    /* Popup modal styles */
+    #popupModal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.6);
+    }
+
+    .modal-content {
+      background-color: white;
+      margin: 10% auto;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 600px;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 28px;
+      font-weight: bold;
+      color: #888;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div id="google_translate_element" style="float:right; margin: 10px;"></div>
+  <header>
+    <h1>Traditional festival food of Uttarakhand</h1>
+  </header>
+  <section>
+    <div class="image-info">
+      <h2 style="text-align:center">Khumb Mela</h2>
+      <p>Kumbh Mela is one of the biggest and the most popular festival of Uttarakhand. It is the largest congregation of pilgrims globally, which involves taking a dip in the river Ganga to rid of one's sins. This mela is a 3-month long festival and takes place once in every four years rotating between Allahabad, Haridwar, Ujjain, and Nasik, i.e., only once in 12 years in any one place. The exact date is picked by the Vikrant calendar after elaborate rituals.</p>
+
+      <center>
+        <img src="https://breathedreamgo.com/wp-content/uploads/2018/12/Kumbh-Mela-aarti.jpg" height="300" width="420" style="cursor:pointer;" onclick="document.getElementById('popupModal').style.display='block'">
+      </center>
+
+      <!-- Popup Modal -->
+      <div id="popupModal">
+        <div class="modal-content">
+          <span class="close" onclick="document.getElementById('popupModal').style.display='none'">&times;</span>
+          <h2 style="color:#d84315;">Significance of Kumbh Mela & Kafuli</h2>
+          <p style="font-size:18px;">
+            <strong>Kumbh Mela</strong> is a sacred gathering of spiritual seekers and pilgrims. Devotees bathe in the holy Ganges River to cleanse their sins and attain spiritual liberation. The mela rotates between four locations, including Haridwar in Uttarakhand, and represents faith, unity, and spiritual enlightenment.
+            <br><br>
+            <strong>Kafuli</strong> is a dish deeply tied to the region’s culture and environment. Made with local greens and ghee, it symbolizes purity, health, and simplicity. Served as prasad during the Kumbh Mela, it nurtures both the body and soul of devotees, reinforcing community bonds and reverence for nature.
+          </p>
+        </div>
+      </div>
+
+      <h1>The Traditional festival food of Uttarakhand is:</h1>
+      <h2>Kafuli</h2>
+      <p>Kafuli is a traditional dish from Uttarakhand, often enjoyed during the Kumbh Mela. It is a thick and flavorful curry made with spinach or other leafy greens, along with spices like cumin, turmeric, and red chili. The dish is usually cooked in ghee and has a unique earthy taste. It pairs well with steamed rice or roti. It is considered a traditional and sacred dish that is prepared and offered as prasad to the devotees. The use of fresh leafy greens, local spices, and ghee in the preparation of Kafuli represents the connection to nature and the simplicity of life in the region. It is believed that consuming Kafuli during the festival brings blessings and good fortune.</p>
+
+      <center>
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://images.slurrp.com/prod/articles/i0vauby5er.webp" alt="Kafuli">
+            </div>
+            <div class="flip-card-back">
+              <div>
+                <strong>Kafuli (~150g):</strong><br>
+                • Calories: 180 kcal<br>
+                • Carbs: 12 g<br>
+                • Protein: 6 g<br>
+                • Fat: 10 g
+              </div>
+            </div>
+          </div>
+        </div>
+      </center>
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>Spinach</li>
+        <li>Cumin seeds</li>
+        <li>Turmeric powder</li>
+        <li>Red chilli powder</li>
+        <li>Coriander powder</li>
+        <li>Ginger</li>
+        <li>Garlic</li>
+        <li>Ghee</li>
+        <li>Salt</li>
+      </ul>
+
+      <h2>Significance</h2>
+      <p>Kafuli holds great significance during the Kumbh Mela in Uttarakhand. It is not only a delicious dish but also a symbol of the region's rich cultural heritage. The use of local ingredients like leafy greens and traditional spices represents the connection to nature and the simplicity of life. Kafuli is often prepared in large quantities and served as a prasad (blessed food) during the festival, signifying unity and the spirit of sharing among devotees. It's a dish that brings people together and adds to the festive atmosphere of the Kumbh Mela.</p>
+
+      <center><a href="index.html"><button>Back</button></a></center>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,te,kn,ta,ml,gu,bn,pa,or',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    let synth = window.speechSynthesis;
+    let currentUtterance = null;
+    function speakText(text) {
+      if (synth.speaking) synth.cancel();
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = 'en-IN';
+      synth.speak(currentUtterance);
+    }
+    function pauseSpeech() {
+      if (synth.speaking && !synth.paused) synth.pause();
+    }
+    function resumeSpeech() {
+      if (synth.paused) synth.resume();
+    }
+    function addSpeechButtons() {
+      const elements = document.querySelectorAll("p, li");
+      elements.forEach((el) => {
+        const container = document.createElement("span");
+        container.className = 'speech-controls';
+
+        const playBtn = document.createElement("button");
+        playBtn.innerText = "🔊 Listen";
+        playBtn.onclick = () => speakText(el.textContent);
+
+        const pauseBtn = document.createElement("button");
+        pauseBtn.innerText = "⏸ Pause";
+        pauseBtn.onclick = pauseSpeech;
+
+        const resumeBtn = document.createElement("button");
+        resumeBtn.innerText = "▶ Resume";
+        resumeBtn.onclick = resumeSpeech;
+
+        container.appendChild(playBtn);
+        container.appendChild(pauseBtn);
+        container.appendChild(resumeBtn);
+
+        el.parentNode.insertBefore(container, el.nextSibling);
+      });
+    }
+    window.onload = addSpeechButtons;
+  </script>
+</body>
+</html>
