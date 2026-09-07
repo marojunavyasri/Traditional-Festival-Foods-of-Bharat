@@ -1,0 +1,273 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Traditional festival food of Mizoram</title>
+  <style>
+    title {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ff7043;
+      text-align: center;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ff7043;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #d84315;
+    }
+
+    p, li {
+      font-size: 18px;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 420px;
+      height: 300px;
+      perspective: 1000px;
+      margin: 20px auto;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .flip-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .flip-card-back {
+      background-color: #ffe0b2;
+      transform: rotateY(180deg);
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 16px;
+      color: #4e342e;
+    }
+
+    .speech-controls button {
+      font-size: 14px;
+      margin-left: 5px;
+      background-color: #ffccbc;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .speech-controls button:hover {
+      background-color: #ffab91;
+    }
+
+    a button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #ff7043;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 30px 0;
+    }
+
+    a button:hover {
+      background-color: #e64a19;
+    }
+
+    /* Popup Modal */
+    #chapcharModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 1000;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="google_translate_element" style="float:right; margin: 10px;"></div>
+  <header>
+    <h1>Traditional festival food of Mizoram</h1>
+  </header>
+
+  <section>
+    <div class="image container">
+      <div class="image-info">
+        <h2 style="text-align :center">Chapchur Kut</h2>
+        <p style="font-size: 20px;">The Chapchar Kut is a festival of Mizoram, India. It is celebrated during March after completion of their most arduous task of jhum operation i.e., jungle-clearing (clearing of the remnants of burning). It is a spring festival celebrated with great favour and gaiety.</p>
+        
+        <!-- Clickable image to show popup -->
+        <center>
+          <img src="https://st.adda247.com/https://wpassets.adda247.com/wp-content/uploads/multisite/sites/5/2020/03/11131545/0197160_kut.jpg"
+               height="300" width="420" style="cursor:pointer"
+               onclick="document.getElementById('chapcharModal').style.display='block'">
+        </center>
+
+        <!-- Popup Modal -->
+        <div id="chapcharModal">
+          <div class="modal-content">
+            <span class="close" onclick="document.getElementById('chapcharModal').style.display='none'">&times;</span>
+            <h2 style="color:#d84315;">Significance of Chapchar Kut</h2>
+            <p style="font-size: 18px; color:#333;">
+              Chapchar Kut marks the end of arduous jungle-clearing for jhum cultivation and expresses gratitude to nature. It is a time of rest, music, dance, and communal joy. It reflects Mizoram’s deep connection to agriculture, seasonal cycles, and community solidarity.
+            </p>
+          </div>
+        </div>
+
+        <h2>Traditional festival food of Chapchur Kut:</h2>
+        <h2>Smoked pork</h2>
+        <p style="font-size: 20px;">The dish cooked for the occasion is smoked pork. In the dish vawksa rep chhum, the pork is typically boiled with green leafy vegetables such as mustard leaves or cabbage. A special dish called Sawhchiar, which is prepared with rice and meat is cooked, and is like a porridge that resembles risotto.</p>
+
+        <!-- Flip card for Smoked Pork -->
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://icytales.com/wp-content/uploads/2020/05/shutterstock_277479917.jpg" alt="Smoked pork">
+            </div>
+            <div class="flip-card-back">
+              <strong>Smoked Pork with Vegetables (~250g):</strong><br>
+              • Calories: 320 kcal<br>
+              • Protein: 22 g<br>
+              • Carbs: 8 g<br>
+              • Fat: 22 g<br>
+              • Fiber: 2 g
+            </div>
+          </div>
+        </div>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li style="font-size: 20px;">Meat</li>
+          <li style="font-size: 20px;">Salt and spices</li>
+        </ul>
+
+        <h2>Significance</h2>
+        <p style="font-size: 20px;">Chapchar Kut used to be celebrated to thank the gods for saving the people from harm during the clearing of forest on hill slopes for jhum cultivation.</p>
+
+        <center><a href="index.html"><button>Back</button></a></center>
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,te,kn,ta,ml,gu,bn,pa,or',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    let synth = window.speechSynthesis;
+    let currentUtterance = null;
+
+    function speakText(text) {
+      if (synth.speaking) synth.cancel();
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = 'en-IN';
+      synth.speak(currentUtterance);
+    }
+
+    function pauseSpeech() {
+      if (synth.speaking && !synth.paused) synth.pause();
+    }
+
+    function resumeSpeech() {
+      if (synth.paused) synth.resume();
+    }
+
+    function addSpeechButtons() {
+      const elements = document.querySelectorAll("p, li");
+      elements.forEach((el) => {
+        const container = document.createElement("span");
+        container.className = 'speech-controls';
+
+        const playBtn = document.createElement("button");
+        playBtn.innerText = "🔊 Listen";
+        playBtn.onclick = () => speakText(el.textContent);
+
+        const pauseBtn = document.createElement("button");
+        pauseBtn.innerText = "⏸ Pause";
+        pauseBtn.onclick = pauseSpeech;
+
+        const resumeBtn = document.createElement("button");
+        resumeBtn.innerText = "▶ Resume";
+        resumeBtn.onclick = resumeSpeech;
+
+        container.appendChild(playBtn);
+        container.appendChild(pauseBtn);
+        container.appendChild(resumeBtn);
+
+        el.parentNode.insertBefore(container, el.nextSibling);
+      });
+    }
+
+    window.onload = addSpeechButtons;
+  </script>
+</body>
+</html>
