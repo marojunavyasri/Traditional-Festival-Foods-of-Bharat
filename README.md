@@ -89,9 +89,11 @@ Google Translate is included to make the website accessible to users who prefer 
 # Project Structure
 
 ```text
-B2-MP2/
+Traditional-Festival-Foods-of-Bharat/
 │
+├── README.md
 ├── index.html
+├── frontpg.html
 ├── style.css
 ├── chatbot.js
 ├── chatbot.py
@@ -99,6 +101,7 @@ B2-MP2/
 │
 ├── ap.html
 ├── ar.html
+├── as.html
 ├── br.html
 ├── ct.html
 ├── ga.html
@@ -211,11 +214,11 @@ Contains a standalone Python version of the Gemini chatbot that can be run throu
 ## 1. Clone the Repository
 
 ```bash
-git clone https://github.com/marojunavyasri/B2-MP2.git
+git clone https://github.com/marojunavyasri/Traditional-Festival-Foods-of-Bharat.git
 ```
 
 ```bash
-cd B2-MP2
+cd Traditional-Festival-Foods-of-Bharat
 ```
 
 ## 2. Install Required Python Packages
