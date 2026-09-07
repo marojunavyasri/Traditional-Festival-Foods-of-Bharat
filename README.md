@@ -306,6 +306,3 @@ The project can be further improved by:
 # Author
 
 **Navya Sri**
-
-GitHub:
-https://github.com/marojunavyasri
