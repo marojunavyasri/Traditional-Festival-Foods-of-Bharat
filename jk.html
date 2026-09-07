@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jammu and Kashmir</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #ff7043;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #d84315;
+    }
+    p, li {
+      font-size: 20px;
+      color: #333;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .flip-card {
+      background-color: transparent;
+      width: 420px;
+      height: 300px;
+      perspective: 1000px;
+      margin: 20px auto;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .flip-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .flip-card-back {
+      background-color: #ffe0b2;
+      transform: rotateY(180deg);
+      padding: 20px;
+      font-size: 16px;
+      color: #4e342e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .speech-controls button {
+      font-size: 14px;
+      margin-left: 5px;
+      background-color: #ffccbc;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .speech-controls button:hover {
+      background-color: #ffab91;
+    }
+    a button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #ff7043;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 30px 0;
+    }
+    a button:hover {
+      background-color: #e64a19;
+    }
+
+    /* Popup Modal */
+    #festivalModal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    #festivalModal .modal-content {
+      background-color: #fff;
+      margin: 10% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 10px;
+      color: #333;
+    }
+
+    #festivalModal .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #festivalModal .close:hover,
+    #festivalModal .close:focus {
+      color: #000;
+    }
+  </style>
+</head>
+<body>
+  <div id="google_translate_element" style="float:right; margin: 10px;"></div>
+  <header>
+    <h1>Traditional festival food of Jammu and Kashmir</h1>
+  </header>
+  <section>
+    <div class="image container">
+      <div class="image-info">
+        <h2 style="text-align:center">Hemis</h2>
+        <p>Hemis Festival in Kashmir is one of the mysterious celebrations. The festival honors Lord Padmasambhava, also known as Guru Rinpoche in the area, and is held every 12 years at the Hemis Monastery in Hemis. A Kashmir festival that is very popular in Ladakh is the Hemis festival which is celebrated as the triumph of good over evil.</p>
+
+        <!-- Festival Image with Popup Trigger -->
+        <center>
+          <img src="https://www.traeminentindiatours.com/blog/wp-content/uploads/2023/05/Hemis-Festival-1.jpg"
+               height="300" width="420"
+               style="cursor:pointer;"
+               onclick="document.getElementById('festivalModal').style.display='block'">
+        </center>
+
+        <!-- Popup Modal -->
+        <div id="festivalModal">
+          <div class="modal-content">
+            <span class="close" onclick="document.getElementById('festivalModal').style.display='none'">&times;</span>
+            <h2 style="color:#d84315;">Significance of Hemis Festival</h2>
+            <p>
+              The Hemis Festival is a vibrant cultural and spiritual celebration in Ladakh that honors the birth of Guru Padmasambhava, the founder of Tibetan Buddhism. It symbolizes the triumph of good over evil. Monks perform sacred mask dances (Cham), and the Hemis Monastery comes alive with chants, rituals, and offerings. The festival serves to preserve ancient traditions and attract global visitors to Ladakhi heritage.
+            </p>
+          </div>
+        </div>
+
+        <h2>The Traditional festival food of Jammu Kashmir is:</h2>
+        <h2>Thukpa</h2>
+        <p>It is a combination of Tibetan-style noodles with vegetables or chicken stew in clear soup. There are several varieties of thukpa, the most popular being gyathuk, pathug, drethug, bakhthu, which use cowrie (shaped like macaroni but made from wheat flour), and thenthuk, which is made of flat noodles.</p>
+
+        <center>
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://2.bp.blogspot.com/-VKo7N7_-x6M/WfQ2P3a6GdI/AAAAAAAAURg/MVpUaQo4_YAst7hAx2XJUDDk_Zz9hu2HgCLcBGAs/w1200-h630-p-k-no-nu/IMG_0882%2B-%2BCopy.JPG" alt="Thukpa">
+              </div>
+              <div class="flip-card-back">
+                <div>
+                  <strong>Thukpa (~150g):</strong><br>
+                  • Calories: 190 kcal<br>• Carbs: 25g<br>• Protein: 7g<br>• Fat: 6g
+                </div>
+              </div>
+            </div>
+          </div>
+        </center>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li>Noodles</li>
+          <li>Classic vegetables like cabbage, bell pepper, carrots, tomatoes, spring onions, spinach in a soup base</li>
+        </ul>
+
+        <h3>Significance</h3>
+        <p>The inclusion of herbs and spices in Thukpa, such as garlic and ginger, known for their immune-boosting properties, can help strengthen the body's defences against illnesses and infections. Hydration and Digestion: Thukpa's broth base helps to hydrate the body while aiding digestion.</p>
+
+        <center><a href="index.html"><button>Back</button></a></center>
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,te,kn,ta,ml,gu,bn,pa,or',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    let synth = window.speechSynthesis;
+    let currentUtterance = null;
+
+    function speakText(text) {
+      if (synth.speaking) synth.cancel();
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = 'en-IN';
+      synth.speak(currentUtterance);
+    }
+
+    function pauseSpeech() {
+      if (synth.speaking && !synth.paused) synth.pause();
+    }
+
+    function resumeSpeech() {
+      if (synth.paused) synth.resume();
+    }
+
+    function addSpeechButtons() {
+      const elements = document.querySelectorAll("p, li");
+      elements.forEach((el) => {
+        const container = document.createElement("span");
+        container.className = 'speech-controls';
+
+        const playBtn = document.createElement("button");
+        playBtn.innerText = "🔊 Listen";
+        playBtn.onclick = () => speakText(el.textContent);
+
+        const pauseBtn = document.createElement("button");
+        pauseBtn.innerText = "⏸ Pause";
+        pauseBtn.onclick = pauseSpeech;
+
+        const resumeBtn = document.createElement("button");
+        resumeBtn.innerText = "▶ Resume";
+        resumeBtn.onclick = resumeSpeech;
+
+        container.appendChild(playBtn);
+        container.appendChild(pauseBtn);
+        container.appendChild(resumeBtn);
+
+        el.parentNode.insertBefore(container, el.nextSibling);
+      });
+    }
+
+    window.onload = addSpeechButtons;
+  </script>
+</body>
+</html>
