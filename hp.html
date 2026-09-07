@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Himachal Pradesh</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #ff7043;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #d84315;
+    }
+    p, li {
+      font-size: 20px;
+      color: #333;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .flip-card {
+      background-color: transparent;
+      width: 420px;
+      height: 300px;
+      perspective: 1000px;
+      margin: 20px auto;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .flip-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .flip-card-back {
+      background-color: #ffe0b2;
+      transform: rotateY(180deg);
+      padding: 20px;
+      font-size: 16px;
+      color: #4e342e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .speech-controls button {
+      font-size: 14px;
+      margin-left: 5px;
+      background-color: #ffccbc;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .speech-controls button:hover {
+      background-color: #ffab91;
+    }
+    a button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #ff7043;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 30px 0;
+    }
+    a button:hover {
+      background-color: #e64a19;
+    }
+    /* Popup Modal */
+    #festivalModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 1000;
+      text-align: center;
+      padding-top: 100px;
+    }
+    #festivalModal .modal-content {
+      background: white;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 12px;
+      position: relative;
+    }
+    #festivalModal .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="google_translate_element" style="float:right; margin: 10px;"></div>
+  <header>
+    <h1>Traditional festival food of Himachal Pradesh</h1>
+  </header>
+  <section>
+    <div class="image container">
+      <div class="image-info">
+        <h2 style="text-align :center">Kullu Dussehra</h2>
+        <p>Kullu Dussehra is one of the most significant festivals in Himachal Pradesh celebrated. In Himachal Pradesh, a grand fair is organised every year in the month of October in the Dhalpur Maidan in the Kullu valley. Accorded as an international fair, this mega festival has been attracting thousands of tourists every year.</p>
+
+        <!-- Festival Image with Popup -->
+        <center>
+          <img src="https://static.langimg.com/thumb/94617605/navbharat-times-94617605.jpg?width=540&resizemode=3"
+               height="300" width="420" style="cursor: pointer;"
+               onclick="document.getElementById('festivalModal').style.display='block'">
+        </center>
+
+        <!-- Festival Significance Popup Modal -->
+        <div id="festivalModal">
+          <div class="modal-content">
+            <span class="close" onclick="document.getElementById('festivalModal').style.display='none'">&times;</span>
+            <h2 style="color:#d84315;">Significance of Kullu Dussehra</h2>
+            <p style="font-size: 18px; color:#333;">
+              Kullu Dussehra marks the return of Lord Rama to Ayodhya and the victory of good over evil. It starts when Dussehra ends in the rest of the country.
+              Over 200 deities are brought together to honor Lord Raghunath, making it a symbol of unity and devotion in Himachal.
+              The festival is a week-long cultural celebration filled with processions, music, and traditional dances in the scenic Kullu valley.
+            </p>
+          </div>
+        </div>
+
+        <h2>The Traditional festival food of Kullu Dussehra is:</h2>
+        <h2>Siddu</h2>
+        <p>Siddu is a delectable traditional dish hailing from Kullu, the beautiful region of Himachal Pradesh, India. Prepared with utmost love and care, this dish is a delightful culinary gem that showcases the unique flavors and culinary traditions of the region. Siddu is a steamed bread-like delicacy made from fermented dough. The dough is typically prepared using wheat flour, water, and yeast, and then left to ferment overnight, allowing it to develop a tangy and slightly sour flavor. The fermented dough is then stuffed with a savory filling, which often consists of spinach, radish, or local herbs, mixed with spices and seasonings.</p>
+
+        <center>
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://www.beingpahadia.com/wp-content/uploads/2020/06/65161657_386313105352421_7489683298599119918_n-828x1024.jpg" alt="Siddu">
+              </div>
+              <div class="flip-card-back">
+                <div>
+                  <strong>Siddu (~150g):</strong><br>
+                  • Calories: 280 kcal<br>• Carbs: 45g<br>• Protein: 6g<br>• Fat: 8g
+                </div>
+              </div>
+            </div>
+          </div>
+        </center>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li>Urad Dal without skin</li>
+          <li>Wheat flour</li>
+          <li>Ghee</li>
+          <li>Active dry yeast</li>
+          <li>Red chilli powder</li>
+          <li>Ginger</li>
+          <li>Green chilli</li>
+          <li>Turmeric powder</li>
+          <li>Asafoetida</li>
+          <li>Coriander</li>
+        </ul>
+
+        <h2>Significance</h2>
+        <p>Siddu serves as a representation of the diverse and valuable cultural heritage that distinguishes their region. This is more than simply bread. Siddu is a symbol of the deep emotional connection and cultural heritage of Himachal Pradesh.</p>
+
+        <center><a href="index.html"><button>Back</button></a></center>
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,te,kn,ta,ml,gu,bn,pa,or',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    let synth = window.speechSynthesis;
+    let currentUtterance = null;
+
+    function speakText(text) {
+      if (synth.speaking) synth.cancel();
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = 'en-IN';
+      synth.speak(currentUtterance);
+    }
+
+    function pauseSpeech() {
+      if (synth.speaking && !synth.paused) synth.pause();
+    }
+
+    function resumeSpeech() {
+      if (synth.paused) synth.resume();
+    }
+
+    function addSpeechButtons() {
+      const elements = document.querySelectorAll("p, li");
+      elements.forEach((el) => {
+        const container = document.createElement("span");
+        container.className = 'speech-controls';
+
+        const playBtn = document.createElement("button");
+        playBtn.innerText = "🔊 Listen";
+        playBtn.onclick = () => speakText(el.textContent);
+
+        const pauseBtn = document.createElement("button");
+        pauseBtn.innerText = "⏸ Pause";
+        pauseBtn.onclick = pauseSpeech;
+
+        const resumeBtn = document.createElement("button");
+        resumeBtn.innerText = "▶ Resume";
+        resumeBtn.onclick = resumeSpeech;
+
+        container.appendChild(playBtn);
+        container.appendChild(pauseBtn);
+        container.appendChild(resumeBtn);
+
+        el.parentNode.insertBefore(container, el.nextSibling);
+      });
+    }
+
+    window.onload = addSpeechButtons;
+  </script>
+</body>
+</html>
+
