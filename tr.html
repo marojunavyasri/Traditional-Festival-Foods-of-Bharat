@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Traditional festival food of Tripura</title>
+  <style>
+    title {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ff7043;
+      text-align: center;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ff7043;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #d84315;
+    }
+
+    p, li {
+      font-size: 18px;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 420px;
+      height: 300px;
+      perspective: 1000px;
+      margin: 20px auto;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .flip-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .flip-card-back {
+      background-color: #ffe0b2;
+      transform: rotateY(180deg);
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 16px;
+      color: #4e342e;
+    }
+
+    .speech-controls button {
+      font-size: 14px;
+      margin-left: 5px;
+      background-color: #ffccbc;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .speech-controls button:hover {
+      background-color: #ffab91;
+    }
+
+    a button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #ff7043;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 30px 0;
+    }
+
+    a button:hover {
+      background-color: #e64a19;
+    }
+
+    /* Popup Modal */
+    #kharachiModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 1000;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="google_translate_element" style="float:right; margin: 10px;"></div>
+  <header>
+    <h1>Traditional festival food of Tripura</h1>
+  </header>
+
+  <section>
+    <h2 style="text-align :center">Kharachi Puja</h2>
+    <div class="image container">
+      <div class="image-info">
+        <p style="font-size: 20px;">Kharachi Puja is one of the most popular festivals in Tripura. It is a week-long royal puja which falls in the month of July on the eighth day of the new moon and attracts thousands of people. This festival is celebrated at Agartala in the temple premises of Fourteen Gods. Kharachi puja is basically done to worship the earth. The puja is performed to wash out the sins and to clean the post-menstrual phase of Mother Earth.</p>
+
+        <center>
+          <img src="https://drishtiias.com/images/uploads/1688104229_image.png" height="300" width="420"
+               style="cursor:pointer"
+               onclick="document.getElementById('kharachiModal').style.display='block'">
+        </center>
+
+        <!-- Popup Modal Content -->
+        <div id="kharachiModal">
+          <div class="modal-content">
+            <span class="close" onclick="document.getElementById('kharachiModal').style.display='none'">&times;</span>
+            <h2 style="color:#d84315;">Significance of Kharachi Puja</h2>
+            <p style="font-size: 18px; color:#333;">
+              Kharachi Puja is a highly revered royal ritual observed in Tripura, primarily to worship the Mother Earth. It is believed to cleanse the sins and impurities of the earth, especially symbolizing purification after her menstrual cycle. The puja signifies reverence to natural forces and fertility. During this sacred celebration, various traditional foods like <b>Muya Awandru</b> are prepared using local and culturally important ingredients like bamboo shoots, fermented fish, and rice flour. This not only connects the community to their roots but also celebrates Tripuri culinary heritage.
+            </p>
+          </div>
+        </div>
+
+        <h2>The food offered during Kharachi puja:</h2>
+        <h2>Muya Awandru</h2>
+        <p style="font-size: 20px;">People offer wide variety of sweets and the sacrificial meat to god. During Kharachi puja in Tripura, a special dish called "Muya Awandru" is prepared. It's a traditional Tripuri dish made with pork, rice, and bamboo shoots. One popular dish that relies heavily on the use of bamboo is Muya Awundru which is made with a rice flour based gravy cooked with fermented fish and varieties of local indigenous vegetables, garnished with haori basil leaves.</p>
+
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://images.slurrp.com/prodarticles/xq7065h353.webp" alt="Muya Awandru">
+            </div>
+            <div class="flip-card-back">
+              <strong>Muya Awandru (~250g):</strong><br>
+              • Calories: 310 kcal<br>
+              • Protein: 20 g<br>
+              • Carbs: 18 g<br>
+              • Fat: 17 g<br>
+              • Fiber: 3 g
+            </div>
+          </div>
+        </div>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li style="font-size: 20px;">500 grams of bamboo shoot</li>
+          <li style="font-size: 20px;">4 medium-sized fermented fish (berma)</li>
+          <li style="font-size: 20px;">10-12 green chilli pepper</li>
+          <li style="font-size: 20px;">3 tablespoon rice flour</li>
+          <li style="font-size: 20px;">Salt as per requirement</li>
+          <li style="font-size: 20px;">Approx 1 litre of water</li>
+          <li style="font-size: 20px;">Parsley leaves</li>
+        </ul>
+
+        <h2>Significance</h2>
+        <p style="font-size: 20px;">It is known for its rich flavors and is a must-try during the festival. Since the recipe relies so heavily on local ingredients, it’s difficult to recreate the flavours anywhere outside of Tripura, but this recipe combines the core elements such as the bamboo, burma and rice flour gravy into a dish that honours the essence of Tripuri cuisine.</p>
+
+        <center><a href="index.html"><button>Back</button></a></center>
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,te,kn,ta,ml,gu,bn,pa,or',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    let synth = window.speechSynthesis;
+    let currentUtterance = null;
+
+    function speakText(text) {
+      if (synth.speaking) synth.cancel();
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = 'en-IN';
+      synth.speak(currentUtterance);
+    }
+
+    function pauseSpeech() {
+      if (synth.speaking && !synth.paused) synth.pause();
+    }
+
+    function resumeSpeech() {
+      if (synth.paused) synth.resume();
+    }
+
+    function addSpeechButtons() {
+      const elements = document.querySelectorAll("p, li");
+      elements.forEach((el) => {
+        const container = document.createElement("span");
+        container.className = 'speech-controls';
+
+        const playBtn = document.createElement("button");
+        playBtn.innerText = "🔊 Listen";
+        playBtn.onclick = () => speakText(el.textContent);
+
+        const pauseBtn = document.createElement("button");
+        pauseBtn.innerText = "⏸ Pause";
+        pauseBtn.onclick = pauseSpeech;
+
+        const resumeBtn = document.createElement("button");
+        resumeBtn.innerText = "▶ Resume";
+        resumeBtn.onclick = resumeSpeech;
+
+        container.appendChild(playBtn);
+        container.appendChild(pauseBtn);
+        container.appendChild(resumeBtn);
+
+        el.parentNode.insertBefore(container, el.nextSibling);
+      });
+    }
+
+    window.onload = addSpeechButtons;
+  </script>
+</body>
+</html>
