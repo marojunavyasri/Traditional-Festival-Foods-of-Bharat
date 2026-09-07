@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Madhya Pradesh</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ff7043;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #d84315;
+    }
+
+    p, li {
+      font-size: 18px;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 300px;
+      height: 300px;
+      perspective: 1000px;
+      margin: 20px auto;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .flip-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .flip-card-back {
+      background-color: #ffe0b2;
+      transform: rotateY(180deg);
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 16px;
+      color: #4e342e;
+    }
+
+    .speech-controls button {
+      font-size: 14px;
+      margin-left: 5px;
+      background-color: #ffccbc;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .speech-controls button:hover {
+      background-color: #ffab91;
+    }
+
+    a button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #ff7043;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 30px 0;
+    }
+
+    a button:hover {
+      background-color: #e64a19;
+    }
+
+    /* Popup styles */
+    #lokrangModal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 1000;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="google_translate_element" style="float:right; margin: 10px;"></div>
+  <header>
+    <h1>Traditional Festival Food of Madhya Pradesh</h1>
+  </header>
+  <section>
+    <div class="image-info">
+      <h2 style="text-align:center">Lokrang</h2>
+      <p>The most awaited cultural festival of Madhya Pradesh, 'Lokrang'. It is a five-day cultural extravaganza that highlights the rich tribal and folk tradition of India through various cultural performances such as performing arts classical dance tribal folk dance and exhibitions of art and crafts. Tourists, dance connoisseurs, music connoisseurs and artists from all over the globe visit this auspicious event. </p>
+
+      <center>
+        <img src="https://www.specialholidays.com/blog/wp-content/uploads/2021/05/Lokrang-Festival-Madhya-Pradesh.jpg"
+             height="300" width="420" alt="Lokrang Festival"
+             style="cursor:pointer"
+             onclick="document.getElementById('lokrangModal').style.display='block'">
+      </center>
+
+      <!-- Modal Popup -->
+      <div id="lokrangModal">
+        <div class="modal-content">
+          <span class="close" onclick="document.getElementById('lokrangModal').style.display='none'">&times;</span>
+          <h2 style="color:#d84315;">Significance of Lokrang Festival</h2>
+          <p style="font-size: 18px; color:#333;">
+            Lokrang is celebrated to preserve and promote India's rich tribal and folk heritage. It showcases traditional art forms, music, crafts, and cuisine that highlight the vibrant diversity of rural and tribal life. It fosters cultural exchange, unity, and pride among communities by bringing together performers and artisans from across the country.
+          </p>
+        </div>
+      </div>
+
+      <h2>The Traditional festival food of Lokrang is:</h2>
+      <h2>Dal Bafla</h2>
+      <p>Daal Bafla that is fondly served in many parts of Madhya Pradesh. Dal Bafla is a mouth-watering cuisine which is very similar to the famous Dal Bati of Rajasthan. Bafla is a delicious treat of the wheat balls well cooked in ghee.</p>
+
+      <!-- ✅ Flip card for Dal Bafla image -->
+      <center>
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://www.pugdundeesafaris.com/blog/wp-content/uploads/2019/03/DSC0075-01.jpeg" height="300" width="420" alt="Dal Bafla">
+            </div>
+            <div class="flip-card-back">
+              <strong>Dal Bafla Nutrition (per serving ~250g):</strong><br>
+              • Calories: 390 kcal<br>
+              • Carbs: 48 g<br>
+              • Protein: 10 g<br>
+              • Fat: 18 g<br>
+              • Fiber: 6 g
+            </div>
+          </div>
+        </div>
+      </center>
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>Wheat flour</li>
+        <li>Ghee</li>
+        <li>Spices</li>
+        <li>Cumin seeds</li>
+      </ul>
+
+      <h2>Significance</h2>
+      <p>Dal Bafla holds great significance during the Lokrang festival in Madhya Pradesh. It is considered a traditional and sacred dish that is prepared and shared with loved ones during this festive occasion. It represents the rich culinary heritage of the region and brings people together in celebration. It's not just a meal, but a symbol of togetherness and joy.</p>
+
+      <center><a href="index.html"><button>Back</button></a></center>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,te,kn,ta,ml,gu,bn,pa,or',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    let synth = window.speechSynthesis;
+    let currentUtterance = null;
+
+    function speakText(text) {
+      if (synth.speaking) synth.cancel();
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = 'en-IN';
+      synth.speak(currentUtterance);
+    }
+
+    function pauseSpeech() {
+      if (synth.speaking && !synth.paused) synth.pause();
+    }
+
+    function resumeSpeech() {
+      if (synth.paused) synth.resume();
+    }
+
+    function addSpeechButtons() {
+      const elements = document.querySelectorAll("p, li");
+      elements.forEach((el) => {
+        const container = document.createElement("span");
+        container.className = 'speech-controls';
+
+        const playBtn = document.createElement("button");
+        playBtn.innerText = "🔊 Listen";
+        playBtn.onclick = () => speakText(el.textContent);
+
+        const pauseBtn = document.createElement("button");
+        pauseBtn.innerText = "⏸ Pause";
+        pauseBtn.onclick = pauseSpeech;
+
+        const resumeBtn = document.createElement("button");
+        resumeBtn.innerText = "▶ Resume";
+        resumeBtn.onclick = resumeSpeech;
+
+        container.appendChild(playBtn);
+        container.appendChild(pauseBtn);
+        container.appendChild(resumeBtn);
+
+        el.parentNode.insertBefore(container, el.nextSibling);
+      });
+    }
+
+    window.onload = addSpeechButtons;
+  </script>
+</body>
+</html>
