@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Traditional festival food of Jharkhand</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ff7043;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #d84315;
+    }
+
+    p, li {
+      font-size: 18px;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 420px;
+      height: 300px;
+      perspective: 1000px;
+      margin: 20px auto;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .flip-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .flip-card-back {
+      background-color: #ffe0b2;
+      transform: rotateY(180deg);
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 16px;
+      color: #4e342e;
+    }
+
+    .speech-controls button {
+      font-size: 14px;
+      margin-left: 5px;
+      background-color: #ffccbc;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .speech-controls button:hover {
+      background-color: #ffab91;
+    }
+
+    a button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #ff7043;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 30px 0;
+    }
+
+    a button:hover {
+      background-color: #e64a19;
+    }
+
+    /* Popup Modal Styling */
+    #festivalModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 1000;
+      padding-top: 100px;
+    }
+
+    #festivalModal .modal-content {
+      background: #fff;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 12px;
+      position: relative;
+      font-size: 18px;
+      color: #333;
+    }
+
+    #festivalModal .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 28px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="google_translate_element" style="float:right; margin: 10px;"></div>
+  <header>
+    <h1>Traditional festival food of Jharkhand</h1>
+  </header>
+
+  <section>
+    <div class="image container">
+      <div class="image-info">
+        <h2 style="text-align :center">Karam Puja</h2>
+        <p style="font-size: 20px;">Karam (colloquially Karma) is a harvest festival celebrated in Jharkhand. It is dedicated to the worship of Karam-Devta (Karam-Lord/God), the god of power, youth and youthfulness. It celebrated for good harvest and health. Unmarried girls fast and grow seedlings for 7-9 days. Then next day, groups of young villagers go to the jungle and collect wood, fruits, and flowers. These are required during the puja (worship) of the Karam God.</p>
+
+        <!-- Image with Popup -->
+        <center>
+          <img src="https://utsav.gov.in/public/uploads/event_picture_image/event_683/1661155441551399950.jpg" height="300" width="420" style="cursor: pointer;" onclick="document.getElementById('festivalModal').style.display='block'">
+        </center>
+
+        <!-- Popup Content -->
+        <div id="festivalModal">
+          <div class="modal-content">
+            <span class="close" onclick="document.getElementById('festivalModal').style.display='none'">&times;</span>
+            <h2 style="color:#d84315;">Significance of Karam Puja</h2>
+            <p>
+              Karam Puja is one of the most important tribal festivals of Jharkhand and eastern India. It is celebrated to worship Karam Devta, the god of youth and strength. The puja is symbolic of prosperity, community bonding, fertility, and environmental reverence.
+              <br><br>
+              The Karam tree branch is brought from the forest and worshipped with traditional songs and dances. Fasting unmarried girls and community participation make the festival an embodiment of social harmony and cultural pride.
+            </p>
+          </div>
+        </div>
+
+        <h2>The Traditional festival food of Karam Puja is:</h2>
+        <h2>Handia</h2>
+        <p style="font-size: 20px;">A delightful beverage from the area, handia requires nearly a week to create. In actuality, the handia is a fermented rice beer, made from rice that has been cooked with over twenty herbs. It is produced particularly for special events, like the paddy harvesting celebration Karma Puja. The Munda and Santhal tribes regard it as a holy beverage as well.</p>
+
+        <!-- Flip Card for Handia -->
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://indiafoodtour.com/wp-content/uploads/2019/07/handia-jharkhand-food.jpg" alt="Handia">
+            </div>
+            <div class="flip-card-back">
+              <strong>Handia (~200ml):</strong><br>
+              • Calories: 150 kcal<br>
+              • Carbs: 20 g<br>
+              • Alcohol: ~6%<br>
+              • Protein: 2 g<br>
+              • Fermented with: 20–25 herbs
+            </div>
+          </div>
+        </div>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li style="font-size: 20px;">Water</li>
+          <li style="font-size: 20px;">Herbs</li>
+          <li style="font-size: 20px;">Rice</li>
+          <li style="font-size: 20px;">Ranu tablets</li>
+        </ul>
+
+        <h2>Significance</h2>
+        <p style="font-size: 20px;">The making involves the use of ranu tablets, which is essentially a combination of about 20–25 herbs and acts as a fermentor. These ranu tablets help in the preparation of many other beverages as well.</p>
+
+        <center><a href="index.html"><button>Back</button></a></center>
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,te,kn,ta,ml,gu,bn,pa,or',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    let synth = window.speechSynthesis;
+    let currentUtterance = null;
+
+    function speakText(text) {
+      if (synth.speaking) synth.cancel();
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = 'en-IN';
+      synth.speak(currentUtterance);
+    }
+
+    function pauseSpeech() {
+      if (synth.speaking && !synth.paused) synth.pause();
+    }
+
+    function resumeSpeech() {
+      if (synth.paused) synth.resume();
+    }
+
+    function addSpeechButtons() {
+      const elements = document.querySelectorAll("p, li");
+      elements.forEach((el) => {
+        const container = document.createElement("span");
+        container.className = 'speech-controls';
+
+        const playBtn = document.createElement("button");
+        playBtn.innerText = "🔊 Listen";
+        playBtn.onclick = () => speakText(el.textContent);
+
+        const pauseBtn = document.createElement("button");
+        pauseBtn.innerText = "⏸ Pause";
+        pauseBtn.onclick = pauseSpeech;
+
+        const resumeBtn = document.createElement("button");
+        resumeBtn.innerText = "▶ Resume";
+        resumeBtn.onclick = resumeSpeech;
+
+        container.appendChild(playBtn);
+        container.appendChild(pauseBtn);
+        container.appendChild(resumeBtn);
+
+        el.parentNode.insertBefore(container, el.nextSibling);
+      });
+    }
+
+    window.onload = addSpeechButtons;
+  </script>
+</body>
+</html>
