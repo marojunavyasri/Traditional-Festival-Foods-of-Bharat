@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Goa</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #ff7043;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #d84315;
+    }
+    p, li {
+      font-size: 20px;
+      color: #333;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .flip-card {
+      background-color: transparent;
+      width: 250px;
+      height: 150px;
+      perspective: 1000px;
+      margin: 20px auto;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .flip-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .flip-card-back {
+      background-color: #ffe0b2;
+      transform: rotateY(180deg);
+      padding: 10px;
+      box-sizing: border-box;
+      font-size: 14px;
+      color: #4e342e;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .speech-controls button {
+      font-size: 14px;
+      margin-left: 5px;
+      background-color: #ffccbc;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .speech-controls button:hover {
+      background-color: #ffab91;
+    }
+    a button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #ff7043;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 30px 0;
+    }
+    a button:hover {
+      background-color: #e64a19;
+    }
+
+    /* Popup */
+    #festivalPopup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 999;
+      text-align: center;
+      padding-top: 100px;
+    }
+    .popup-content {
+      background: white;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 12px;
+      position: relative;
+    }
+    .popup-content h2 {
+      margin-top: 0;
+    }
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 28px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="google_translate_element" style="float:right; margin: 10px;"></div>
+  <header>
+    <h1>Traditional festival foods of Goa</h1>
+  </header>
+  <section>
+    <div class="image container">
+      <div class="image-info">
+        <h2 style="text-align:center">Shimgo</h2>
+        <p>Shigmo is a spring festival celebrated in the Indian state of Goa, where it is one of the major festivals of the Hindu community. It is also celebrated by Konkani diaspora and Indian festival of Holi is part of it. Shigmo consisting of traditional folk and street dancers and elaborately built floats depicting scenes from regional mythology and religious scenes.</p>
+
+        <!-- Festival image with popup trigger -->
+        <center>
+          <img src="https://static.mygoldengoa.com/uploads/2014/05/shigmo.jpg" height="300" width="420" style="cursor:pointer;" onclick="document.getElementById('festivalPopup').style.display='block'">
+        </center>
+
+        <!-- Popup Box -->
+        <div id="festivalPopup">
+          <div class="popup-content">
+            <span class="close" onclick="document.getElementById('festivalPopup').style.display='none'">&times;</span>
+            <h2>Significance of Shimgo Festival</h2>
+            <p style="font-size:18px;">Shimgo or Shigmo is Goa's springtime festival of colors and culture, combining elements of Holi with local Konkani and Hindu customs. It celebrates the harvest, marks the arrival of spring, and honors the valor of Goan warriors. Street dances, processions, and festive cuisine form its vibrant core.</p>
+          </div>
+        </div>
+
+        <h2>The Traditional festival food of Goa is:</h2>
+        <h2>Goan dishes</h2>
+        <p>Food plays an important role in the celebrations of the Shigmo festival. Traditional Goan dishes, such as ‘sorpotel’, ‘vindaloo’, and ‘fish curry’, are prepared and shared among friends and family. The festival is also a time for people to indulge in the famous ‘feni’, a local drink made from cashew nuts or coconut.</p>
+
+        <h2>Sorpotel</h2>
+        <p>In Goa and Sorpotel is often accompanied by ‘Sanna’, a spongy, white, and slightly sweet steamed rice and coconut bread. However, it can also be enjoyed with Pao, on cooked rice, or in a bun as a sandwich.</p>
+
+
+
+        <center>
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://images.slurrp.com/prodarticles/s8ar5pdhqs.webp" alt="Sorpotel">
+              </div>
+              <div class="flip-card-back">
+                <div>
+                  <strong>Sorpotel (~150g)</strong><br>
+                  • Calories: 320 kcal<br>• Carbs: 5g<br>• Protein: 18g<br>• Fat: 26g
+                </div>
+              </div>
+            </div>
+          </div>
+        </center>
+
+        <center><a href="c:\Users\saire\OneDrive\Pictures\Screenshots\Screenshot 2024-02-12 181801.png">Ingredients</a></center>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li>Pork meat</li>
+          <li>Onion</li>
+          <li>Recheado masala</li>
+          <li>Ginger</li>
+          <li>Garlic</li>
+          <li>Green Chilies</li>
+          <li>Vindaloo</li>
+          <li>Vinegar</li>
+          <li>Salt</li>
+        </ul>
+
+        <h2>Vindaloo</h2>
+        <p>Vindaloo is a spicy and tangy Indian curry that has gained immense popularity all over the world for its unique blend of flavors. It is a traditional Goan dish that has its origins in the Portuguese colonial period. The word “vindaloo” is derived from the Portuguese word “vinho de alho,” which means “wine and garlic.”</p>
+
+
+
+        <center>
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://assets.cntraveller.in/photos/60ba2039a1a415b43b10bfc8/4:3/w_1024,h_768,c_limit/Goan-vindaloo-1366x768.jpg" alt="Vindaloo">
+              </div>
+              <div class="flip-card-back">
+                <div>
+                  <strong>Vindaloo (~150g)</strong><br>
+                  • Calories: 280 kcal<br>• Carbs: 10g<br>• Protein: 22g<br>• Fat: 18g
+                </div>
+              </div>
+            </div>
+          </div>
+        </center>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li>Pork</li>
+          <li>Vinegar</li>
+          <li>Spices</li>
+          <li>Chili pepper</li>
+        </ul>
+
+        <h2>Malabar matthi curry</h2>
+        <p>Malabar matthi curry, also known as fish curry, is an Indian and Goan dish. It consists of sardines semi-stewed in a Kerala-style curry with assorted vegetables, such as okra or onions. It is usually served with rice or tapioca. The dish is most popular in Goa.</p>
+
+
+        <center>
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://www.196flavors.com/wp-content/uploads/2022/08/Goan-Fish-Curry-fp-500x500.jpg" alt="Fish Curry">
+              </div>
+              <div class="flip-card-back">
+                <div>
+                  <strong>Fish Curry (~150g)</strong><br>
+                  • Calories: 260 kcal<br>• Carbs: 6g<br>• Protein: 20g<br>• Fat: 18g
+                </div>
+              </div>
+            </div>
+          </div>
+        </center>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li>Sardines</li>
+          <li>King Fish</li>
+          <li>Spices</li>
+          <li>Vinegar</li>
+        </ul>
+
+        <h2>Significance</h2>
+        <p>The cuisine of Goa originated from its Konkani roots, and was influenced by the 451 years of Portuguese rule and the Sultanate rule that preceded the Portuguese. Many Catholic dishes are either similar to or variants of their Portuguese counterparts in both naming or their use of ingredients.</p>
+        <center><a href="index.html"><button>Back</button></a></center>
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,te,kn,ta,ml,gu,bn,pa,or',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    let synth = window.speechSynthesis;
+    let currentUtterance = null;
+    function speakText(text) {
+      if (synth.speaking) synth.cancel();
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = 'en-IN';
+      synth.speak(currentUtterance);
+    }
+    function pauseSpeech() {
+      if (synth.speaking && !synth.paused) synth.pause();
+    }
+    function resumeSpeech() {
+      if (synth.paused) synth.resume();
+    }
+    function addSpeechButtons() {
+      const elements = document.querySelectorAll("p, li");
+      elements.forEach((el) => {
+        const container = document.createElement("span");
+        container.className = 'speech-controls';
+        const playBtn = document.createElement("button");
+        playBtn.innerText = "🔊 Listen";
+        playBtn.onclick = () => speakText(el.textContent);
+        const pauseBtn = document.createElement("button");
+        pauseBtn.innerText = "⏸ Pause";
+        pauseBtn.onclick = pauseSpeech;
+        const resumeBtn = document.createElement("button");
+        resumeBtn.innerText = "▶ Resume";
+        resumeBtn.onclick = resumeSpeech;
+        container.appendChild(playBtn);
+        container.appendChild(pauseBtn);
+        container.appendChild(resumeBtn);
+        el.parentNode.insertBefore(container, el.nextSibling);
+      });
+    }
+    window.onload = addSpeechButtons;
+  </script>
+</body>
+</html>
