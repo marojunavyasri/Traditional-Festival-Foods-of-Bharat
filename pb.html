@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Punjab</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #ff7043;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #d84315;
+    }
+    p, li {
+      font-size: 18px;
+      color: #333;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .flip-card {
+      background-color: transparent;
+      width: 420px;
+      height: 300px;
+      perspective: 1000px;
+      margin: 20px auto;
+    }
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .flip-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .flip-card-back {
+      background-color: #ffe0b2;
+      transform: rotateY(180deg);
+      padding: 20px;
+      font-size: 16px;
+      color: #4e342e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .speech-controls button {
+      font-size: 14px;
+      margin-left: 5px;
+      background-color: #ffccbc;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .speech-controls button:hover {
+      background-color: #ffab91;
+    }
+    a button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #ff7043;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 30px 0;
+    }
+    a button:hover {
+      background-color: #e64a19;
+    }
+
+    /* Popup Modal */
+    #baisakhiModal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 1000;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    #baisakhiModal .modal-content {
+      background: white;
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 12px;
+      position: relative;
+    }
+
+    #baisakhiModal .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="google_translate_element" style="float:right; margin: 10px;"></div>
+  <header>
+    <h1>Traditional festival food of Punjab</h1>
+  </header>
+  <section>
+    <div class="image container">
+      <div class="image-info">
+        <h2 style="text-align:center">Baisakhi</h2>
+        <p id="para1">Baisakhi, also known as Vaisakhi, is a harvest festival celebrated in the northern Indian state of Punjab. It falls on the 13th or 14th of April every year and marks the beginning of the new solar year. The festival holds religious significance for Sikhs as it commemorates the formation of the Khalsa Panth by Guru Gobind Singh in 1699. It is celebrated with great enthusiasm and fervor, with people participating in traditional music, dance, and processions. Farmers thank the Almighty for a good harvest and pray for prosperity in the coming year.</p>
+        <div class="speech-controls">
+          <button onclick="speakText('para1')">🔊 Listen</button>
+          <button onclick="pauseSpeech()">⏸ Pause</button>
+          <button onclick="resumeSpeech()">▶ Resume</button>
+        </div>
+
+        <!-- Image with Popup -->
+        <center>
+          <img src="https://www.thestatesman.com/wp-content/uploads/2023/04/5E1C6DA0-4687-4272-A912-6F5434D00AF3.jpeg" height="300" width="420"
+               style="cursor:pointer"
+               onclick="document.getElementById('baisakhiModal').style.display='block'">
+        </center>
+
+        <!-- Modal -->
+        <div id="baisakhiModal">
+          <div class="modal-content">
+            <span class="close" onclick="document.getElementById('baisakhiModal').style.display='none'">&times;</span>
+            <h2 style="color:#d84315;">Why is Baisakhi Celebrated?</h2>
+            <p style="font-size: 18px; color:#333;">
+              Baisakhi is celebrated as a harvest festival to mark the beginning of the new solar year and the rabi crop harvest. For Sikhs, it commemorates the founding of the Khalsa Panth in 1699 by Guru Gobind Singh. The festival symbolizes prosperity, unity, and faith. <br><br>
+              <strong>Festival Food:</strong> One of the main dishes is <em>Meethe Chawal</em>—sweet saffron rice made with ghee, cardamom, and dry fruits, symbolizing joy and abundance.
+            </p>
+          </div>
+        </div>
+
+        <h2>The Traditional festival food of Baisakhi is:</h2>
+        <h2>Meethe Chawal</h2>
+
+        <p id="para2">Sweet yellow rice or meethe chawal is a dish that is traditionally served during Baisakhi. This dish is prepared by cooking basmati rice with sugar, saffron, and ghee, and is flavored with cardamom, cinnamon, and garnished with dry fruits. The vibrant yellow color symbolizes prosperity and joy. It is a staple in Punjabi households during this festive season and is enjoyed by people of all ages.</p>
+        <div class="speech-controls">
+          <button onclick="speakText('para2')">🔊 Listen</button>
+          <button onclick="pauseSpeech()">⏸ Pause</button>
+          <button onclick="resumeSpeech()">▶ Resume</button>
+        </div>
+
+        <center>
+          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://www.funfoodfrolic.com/wp-content/uploads/2020/07/zarda-thumbnail.jpg" alt="Meethe Chawal">
+              </div>
+              <div class="flip-card-back">
+                <div>
+                  <strong>Meethe Chawal (~150g):</strong><br>
+                  • Calories: 340 kcal<br>
+                  • Carbs: 55 g<br>
+                  • Protein: 4 g<br>
+                  • Fat: 12 g
+                </div>
+              </div>
+            </div>
+          </div>
+        </center>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li>Basmati Rice</li>
+          <li>Sugar</li>
+          <li>Ghee</li>
+          <li>Cinnamon</li>
+          <li>Green Cardamoms</li>
+          <li>Saffron Strands(kesar)</li>
+          <li>Dry fruits</li>
+        </ul>
+
+        <h2>Significance</h2>
+        <p id="para3">The yellow color of the meethe chawal signifies vitality, strength, sunlight and happiness. It is symbolic of a new beginning and prosperity, which aligns with the essence of the Baisakhi festival — a celebration of harvest and hope. Preparing and sharing this sweet dish brings families together and reinforces cultural traditions passed down through generations.</p>
+        <div class="speech-controls">
+          <button onclick="speakText('para3')">🔊 Listen</button>
+          <button onclick="pauseSpeech()">⏸ Pause</button>
+          <button onclick="resumeSpeech()">▶ Resume</button>
+        </div>
+
+        <center><a href="index.html"><button>Back</button></a></center>
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,te,kn,ta,ml,gu,bn,pa,or',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    let synth = window.speechSynthesis;
+    let currentUtterance = null;
+
+    function speakText(id) {
+      const text = document.getElementById(id).textContent;
+      if (synth.speaking) synth.cancel();
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = 'en-IN';
+      synth.speak(currentUtterance);
+    }
+
+    function pauseSpeech() {
+      if (synth.speaking && !synth.paused) synth.pause();
+    }
+
+    function resumeSpeech() {
+      if (synth.paused) synth.resume();
+    }
+  </script>
+</body>
+</html>
