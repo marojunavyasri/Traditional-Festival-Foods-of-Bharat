@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Traditional festival foods of Kerala</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fff8f0;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ff7043;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #d84315;
+    }
+
+    p, li {
+      font-size: 18px;
+      color: #333;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 420px;
+      height: 300px;
+      perspective: 1000px;
+      margin: 20px auto;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card.flipped .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front, .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .flip-card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .flip-card-back {
+      background-color: #ffe0b2;
+      transform: rotateY(180deg);
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 16px;
+      color: #4e342e;
+    }
+
+    .speech-controls button {
+      font-size: 14px;
+      margin-left: 5px;
+      background-color: #ffccbc;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .speech-controls button:hover {
+      background-color: #ffab91;
+    }
+
+    a button {
+      font-size: 18px;
+      padding: 10px 20px;
+      background-color: #ff7043;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 30px 0;
+    }
+
+    a button:hover {
+      background-color: #e64a19;
+    }
+
+    /* Popup styles */
+    #popupModal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 80%;
+      max-width: 600px;
+      margin: 10% auto;
+      color: #333;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="google_translate_element" style="float:right; margin: 10px;"></div>
+  <header>
+    <h1>Traditional festival foods of Kerala</h1>
+  </header>
+
+  <section>
+    <div class="image container">
+      <div class="image-info">
+        <h2 style="text-align:center">Onam</h2>
+        <p style="font-size: 20px;">Onam is the most popular festival in the state of Kerala, India. Onam is the official state festival of Kerala. It is celebrated with joy and enthusiasm all over the state by Malayalees regardless of religion, caste or creed. According to a popular legend, the festival is celebrated to welcome King Mahabali, whose spirit is said to visit Kerala in the time of Onam. It also is hindu festival but there is no inequality among cast all cast celebrate it together. Onam is a 10 day long festival celebrated in the beginning of the month of Chingam, the first month of the Malayalam Calendar (Kollavarsham).</p>
+        
+        <!-- Festival Image with Popup -->
+        <center>
+          <img src="https://static.india.com/wp-content/uploads/2021/08/pjimage-64-1.jpg?impolicy=Medium_Resize&w=1200&h=800"
+               height="300" width="420"
+               alt="Onam Festival"
+               style="cursor:pointer"
+               onclick="document.getElementById('popupModal').style.display='block'">
+        </center>
+
+        <!-- Popup Modal -->
+        <div id="popupModal">
+          <div class="modal-content">
+            <span class="close" onclick="document.getElementById('popupModal').style.display='none'">&times;</span>
+            <h2>Significance of Onam Festival</h2>
+            <p>
+              Onam is celebrated to honor the return of the mythical King Mahabali, whose reign was considered a golden era of Kerala marked by prosperity, equality, and peace. The grand celebration of Onam with floral decorations, boat races, dances, and elaborate meals like Sadya symbolizes unity among communities and the spirit of sharing. It is a reminder of cultural heritage and Kerala’s values of equality and harmony.
+            </p>
+          </div>
+        </div>
+
+        <h2>Traditional foods prepared during Onam:</h2>
+        <h2>Sadya</h2>
+        <p style="font-size: 20px;">Sadya is a meal of Kerala origin and of importance to all Malayalis, consisting of a variety of traditional vegetarian dishes usually served on a banana leaf in Kerala as lunch. Sadya means banquet in Malayalam. Sadya is typically served as a traditional feast for Onam, the state festival of Kerala and Vishu. A typical Sadya can have about 24–28 dishes served as a single course. In cases where it is a much larger one it can have over 64 or more items, such as the Sadya for Aranmula Boat Race (Valla Sadya). During a traditional Sadya celebration, people are seated cross-legged on mats. Food is eaten with the right hand, without cutlery. The fingers are cupped to form a ladle.</p>
+
+        <!-- Flip Card for Sadya -->
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://i.pinimg.com/736x/9c/2c/a1/9c2ca13864a8db0b20d4b0858d68bdb5.jpg" alt="Sadya">
+            </div>
+            <div class="flip-card-back">
+              <strong>Sadya (Typical Plate):</strong><br>
+              • Calories: 700–900 kcal<br>
+              • Protein: 10–15 g<br>
+              • Carbs: 100+ g<br>
+              • Fat: 25–30 g<br>
+              • ~26 items served
+            </div>
+          </div>
+        </div>
+
+       <p style="font-size: 20px;">The main dish is plain boiled rice, served along with other curries, Koottaan which include curries like parippu, sambar, rasam, pulisseri and others like kaalan, avial, thoran, olan, pachadi, kichadi, koottukari, erissery, mango pickle, injipuli, mezhukkupuratti, naranga achaar (lime pickle), as well as papadam, plantain chips, sharkara upperi, banana, plain curd and buttermilk. The buttermilk is typically served near the end of the meal. The traditional dessert called payasam served at the end of the meal is of many kinds and usually three or more are served. Some of the varieties are Paal Ada pradhaman, Ada pradhaman, Parippu pradhaman, Chakka pradhaman, Gothampu payasam, Paal Payasam etc. The different 'Koottan' are made with different vegetables and have different flavours. The variety of curries is to symbolize prosperity and well being.</p>
+
+        <h2>Ada pradhaman</h2>
+        <p style="font-size: 20px;">Ada pradhaman is a traditional Keralan dessert made by using the rice ada (rice pasta or flakes) with a sauce of cooked coconut milk and jaggery. Ada pradhaman is specially prepared in every home of the state of Kerala, India on the festival day of Onam, it is served together with Sadya. A variety of payasam, ada pradhaman is known as the King of Payasam.</p>
+
+
+
+        <!-- Flip Card for Ada Pradhaman -->
+        <div class="flip-card" onclick="this.classList.toggle('flipped')">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="https://images.archanaskitchen.com/images/recipes/indian/sweet-recipes/ADA_PRADHAMAN_Kerala_Style_Rice_Flake_Pudding_With_Jaggery_Coconut_Milk_8d1bddce18.jpg " alt="Ada Pradhaman">
+            </div>
+            <div class="flip-card-back">
+              <strong>Ada Pradhaman (~150g):</strong><br>
+              • Calories: 280 kcal<br>
+              • Carbs: 42 g<br>
+              • Fat: 10 g<br>
+              • Sugar: 22 g<br>
+              • Coconut Milk & Jaggery
+            </div>
+          </div>
+        </div>
+
+        <h2>Ingredients</h2>
+        <ul>
+          <li style="font-size: 20px;">Rice ada</li>
+          <li style="font-size: 20px;">Coconut milk</li>
+          <li style="font-size: 20px;">Jaggery or sugar</li>
+          <li style="font-size: 20px;">Ghee</li>
+        </ul>
+
+        <h2>Significance</h2>
+       <p style="font-size: 20px;">Beyond the tantalizing dishes, Onam's meal customs add an extra layer of significance to the festivities. The Sadhya is traditionally served on a banana leaf, a symbol of prosperity and abundance. Each dish finds its place on the leaf, each placement carrying a specific cultural meaning.</p>
+
+
+
+        <center><a href="index.html"><button>BACK</button></a></center>
+      </div>
+    </div>
+  </section>
+
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,hi,te,kn,ta,ml,gu,bn,pa,or',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script>
+    let synth = window.speechSynthesis;
+    let currentUtterance = null;
+
+    function speakText(text) {
+      if (synth.speaking) synth.cancel();
+      currentUtterance = new SpeechSynthesisUtterance(text);
+      currentUtterance.lang = 'en-IN';
+      synth.speak(currentUtterance);
+    }
+
+    function pauseSpeech() {
+      if (synth.speaking && !synth.paused) synth.pause();
+    }
+
+    function resumeSpeech() {
+      if (synth.paused) synth.resume();
+    }
+
+    function addSpeechButtons() {
+      const elements = document.querySelectorAll("p, li");
+      elements.forEach((el) => {
+        const container = document.createElement("span");
+        container.className = 'speech-controls';
+
+        const playBtn = document.createElement("button");
+        playBtn.innerText = "🔊 Listen";
+        playBtn.onclick = () => speakText(el.textContent);
+
+        const pauseBtn = document.createElement("button");
+        pauseBtn.innerText = "⏸ Pause";
+        pauseBtn.onclick = pauseSpeech;
+
+        const resumeBtn = document.createElement("button");
+        resumeBtn.innerText = "▶ Resume";
+        resumeBtn.onclick = resumeSpeech;
+
+        container.appendChild(playBtn);
+        container.appendChild(pauseBtn);
+        container.appendChild(resumeBtn);
+
+        el.parentNode.insertBefore(container, el.nextSibling);
+      });
+    }
+
+    window.onload = addSpeechButtons;
+  </script>
+</body>
+</html>
