@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Tamil Nadu</title>
+
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,34 +15,45 @@
       padding: 0;
       line-height: 1.6;
     }
+
     header {
       background-color: #ff7043;
       color: white;
       padding: 20px 0;
       text-align: center;
     }
+
     section {
       padding: 20px;
       max-width: 1000px;
       margin: auto;
     }
+
     h2 {
       color: #d84315;
     }
-    p, li {
+
+    p,
+    li {
       font-size: 18px;
       color: #333;
     }
+
     ul {
       padding-left: 20px;
     }
+
+    /* Flip Card */
+
     .flip-card {
       background-color: transparent;
       width: 420px;
       height: 300px;
       perspective: 1000px;
       margin: 20px auto;
+      cursor: pointer;
     }
+
     .flip-card-inner {
       position: relative;
       width: 100%;
@@ -47,23 +61,28 @@
       transition: transform 0.8s;
       transform-style: preserve-3d;
     }
+
     .flip-card.flipped .flip-card-inner {
       transform: rotateY(180deg);
     }
-    .flip-card-front, .flip-card-back {
+
+    .flip-card-front,
+    .flip-card-back {
       position: absolute;
       width: 100%;
       height: 100%;
       backface-visibility: hidden;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
+
     .flip-card-front img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     .flip-card-back {
       background-color: #ffe0b2;
       transform: rotateY(180deg);
@@ -71,7 +90,14 @@
       box-sizing: border-box;
       font-size: 16px;
       color: #4e342e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
+
+    /* Speech Buttons */
+
     .speech-controls button {
       font-size: 14px;
       margin-left: 5px;
@@ -81,9 +107,13 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
     .speech-controls button:hover {
       background-color: #ffab91;
     }
+
+    /* Back Button */
+
     a button {
       font-size: 18px;
       padding: 10px 20px;
@@ -94,137 +124,440 @@
       cursor: pointer;
       margin: 30px 0;
     }
+
     a button:hover {
       background-color: #e64a19;
     }
+
+    /* Popup Modal */
+
     #pongalModal {
       display: none;
       position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       background-color: rgba(0, 0, 0, 0.6);
       z-index: 1000;
       text-align: center;
       padding-top: 100px;
+      box-sizing: border-box;
     }
+
     .modal-content {
-      background: white;
+      background-color: white;
       padding: 30px;
       max-width: 600px;
       margin: auto;
       border-radius: 12px;
       position: relative;
     }
+
     .close {
       position: absolute;
       top: 10px;
       right: 20px;
       font-size: 30px;
       cursor: pointer;
+      color: #777;
     }
+
+    .close:hover {
+      color: #000;
+    }
+
   </style>
 </head>
+
 <body>
-  <div id="google_translate_element" style="float:right; margin: 10px;"></div>
+
+  <!-- Google Translate -->
+
+  <div id="google_translate_element"
+       style="float:right; margin:10px;">
+  </div>
+
+
+  <!-- Header -->
+
   <header>
     <h1>Traditional festival foods of Tamil Nadu</h1>
   </header>
+
+
   <section>
+
     <main class="content-container">
-      <div class="image container">
+
+      <div class="image-container">
+
+
+        <!-- Pongal Festival -->
+
+        <h2 style="text-align:center;">
+          Pongal Festival
+        </h2>
+
+        <p>
+          Pongal is one of the most important festivals
+          celebrated in Tamil Nadu. It is a harvest festival
+          dedicated to the Sun God. The festival expresses
+          gratitude for a successful harvest and symbolizes
+          prosperity, happiness, and the close relationship
+          between people, nature, and agriculture.
+        </p>
+
+
+        <!-- Pongal Festival Image -->
+
         <center>
-          <img src="https://www.tamilnadutourism.tn.gov.in/img/pages/medium-desktop/pongal-festival-1655203568_081076b873773d2d1b1a.webp"
-               height="300" width="420"
-               style="cursor:pointer"
+
+          <img src="images/pongal-festival.jpg"
+               height="300"
+               width="420"
+               alt="Pongal Festival"
+               style="cursor:pointer; object-fit:cover;"
                onclick="document.getElementById('pongalModal').style.display='block'">
+
         </center>
+
+
+        <!-- Popup Modal -->
+
         <div id="pongalModal">
+
           <div class="modal-content">
-            <span class="close" onclick="document.getElementById('pongalModal').style.display='none'">&times;</span>
-            <h2 style="color:#d84315;">Significance of Pongal Festival</h2>
-            <p style="font-size: 18px; color:#333;">
-              Pongal is celebrated in Tamil Nadu to mark the beginning of the harvest season. It is dedicated to the Sun God (Surya), thanking him for the bountiful harvest. The festival symbolizes prosperity, gratitude, and the harmonious bond between humans and nature. The overflowing of milk in the Pongal pot signifies abundance and joy.
+
+            <span class="close"
+                  onclick="document.getElementById('pongalModal').style.display='none'">
+              &times;
+            </span>
+
+            <h2 style="color:#d84315;">
+              Significance of Pongal Festival
+            </h2>
+
+            <p style="font-size:18px; color:#333;">
+
+              Pongal is celebrated in Tamil Nadu to mark the
+              beginning of the harvest season. It is dedicated
+              to the Sun God (Surya), thanking him for the
+              bountiful harvest.
+
+              The festival symbolizes prosperity, gratitude,
+              and the harmonious bond between humans and nature.
+              The overflowing of milk in the Pongal pot signifies
+              abundance, prosperity, and joy.
+
             </p>
+
           </div>
+
         </div>
+
+
+        <!-- Food Information -->
+
         <div class="image-info">
-          <h2 style="text-align:center">Pongal</h2>
-          <p>Pongal is a South Indian dish of rice cooked in boiling milk. Its preparation is the main custom associated with Pongal festival. As part of Tamil cuisine, varieties include venn (hot) pongal, sakkarai (sweet) pongal, kozhi (chicken) pongal, and sanyasi pongal.</p>
-          <div class="flip-card" onclick="this.classList.toggle('flipped')">
+
+          <h2 style="text-align:center;">
+            Pongal
+          </h2>
+
+          <p>
+            Pongal is a traditional South Indian dish made
+            mainly with rice and milk. It is closely associated
+            with the Pongal harvest festival. There are several
+            varieties of Pongal, including Venn Pongal,
+            Sakkarai Pongal, Kozhi Pongal, and Sanyasi Pongal.
+          </p>
+
+
+          <!-- Flip Card -->
+
+          <div class="flip-card"
+               onclick="this.classList.toggle('flipped')">
+
             <div class="flip-card-inner">
+
+
+              <!-- Front Side -->
+
               <div class="flip-card-front">
-                <img src="https://curlytales.com/wp-content/uploads/2023/01/Chakkara-1.jpg" alt="Pongal Dish">
+
+                <img src="images/sakkarai-pongal.jpg"
+                     alt="Sakkarai Pongal">
+
               </div>
+
+
+              <!-- Back Side -->
+
               <div class="flip-card-back">
-                <strong>Sakkarai Pongal (~150g):</strong><br>
-                • Calories: 272 kcal<br>
-                • Carbs: 48.7 g<br>
-                • Protein: 3.8 g<br>
-                • Fat: 6.9 g<br>
-                • Fiber: 1.4 g
+
+                <div>
+
+                  <strong>
+                    Sakkarai Pongal (~150g):
+                  </strong>
+
+                  <br><br>
+
+                  • Calories: 272 kcal
+                  <br>
+
+                  • Carbohydrates: 48.7 g
+                  <br>
+
+                  • Protein: 3.8 g
+                  <br>
+
+                  • Fat: 6.9 g
+                  <br>
+
+                  • Fiber: 1.4 g
+
+                </div>
+
               </div>
+
             </div>
+
           </div>
+
+
+          <!-- Information -->
+
+          <h2>Ingredients</h2>
+
           <ul>
-            <li>Place of origin: Sri Lanka.</li>
-            <li>Region or state: South India.</li>
-            <li>Associated cuisine: Tamil cuisine.</li>
-            <li>Main ingredients: Rice, milk.</li>
-            <li>Variations: Venn pongal, sakkarai pongal, kozhi pongal, sanyasi pongal.</li>
+
+            <li>
+              Rice
+            </li>
+
+            <li>
+              Milk
+            </li>
+
+            <li>
+              Jaggery
+            </li>
+
+            <li>
+              Ghee
+            </li>
+
+            <li>
+              Cashews and raisins
+            </li>
+
+            <li>
+              Cardamom
+            </li>
+
           </ul>
+
+
+          <!-- Additional Information -->
+
+          <h3>Place of Origin:</h3>
+
+          <p>
+            Tamil Nadu, South India.
+          </p>
+
+
+          <h3>Associated Cuisine:</h3>
+
+          <p>
+            Tamil cuisine.
+          </p>
+
+
           <h3>Significance:</h3>
-          <p>Pongal is associated with the Pongal festival whose name means "to boil over". The festival thanks the Sun deity for the sunlight that makes the rice harvest possible. Therefore, the tradition calls for offering the fresh harvest of rice cooked in boiling milk to the deity.</p>
-          <center><a href="index.html"><button>Back</button></a></center>
+
+          <p>
+
+            Pongal is strongly associated with the harvest
+            festival of the same name. The festival is a way
+            of thanking the Sun deity, nature, farmers, and
+            cattle for supporting agriculture and providing
+            a successful harvest.
+
+            Sakkarai Pongal, the sweet version of Pongal,
+            is traditionally prepared using newly harvested
+            rice, milk, jaggery, and ghee and is offered as
+            part of the festival celebrations.
+
+          </p>
+
+
+          <!-- Back Button -->
+
+          <center>
+
+            <a href="index.html">
+
+              <button>
+                Back
+              </button>
+
+            </a>
+
+          </center>
+
         </div>
+
       </div>
+
     </main>
+
   </section>
+
+
+  <!-- Google Translate -->
+
   <script type="text/javascript">
+
     function googleTranslateElementInit() {
+
       new google.translate.TranslateElement({
+
         pageLanguage: 'en',
-        includedLanguages: 'en,hi,te,kn,ta,ml,gu,bn,pa,or',
-        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL
+
+        includedLanguages:
+          'en,hi,te,kn,ta,ml,gu,bn,pa,or',
+
+        layout:
+          google.translate.TranslateElement.InlineLayout.HORIZONTAL
+
       }, 'google_translate_element');
+
     }
+
   </script>
-  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+  </script>
+
+
+  <!-- Speech Functionality -->
+
   <script>
+
     let synth = window.speechSynthesis;
+
     let currentUtterance = null;
+
+
     function speakText(text) {
-      if (synth.speaking) synth.cancel();
-      currentUtterance = new SpeechSynthesisUtterance(text);
+
+      if (synth.speaking) {
+        synth.cancel();
+      }
+
+      currentUtterance =
+        new SpeechSynthesisUtterance(text);
+
       currentUtterance.lang = 'en-IN';
+
       synth.speak(currentUtterance);
+
     }
+
+
     function pauseSpeech() {
-      if (synth.speaking && !synth.paused) synth.pause();
+
+      if (synth.speaking && !synth.paused) {
+
+        synth.pause();
+
+      }
+
     }
+
+
     function resumeSpeech() {
-      if (synth.paused) synth.resume();
+
+      if (synth.paused) {
+
+        synth.resume();
+
+      }
+
     }
+
+
     function addSpeechButtons() {
-      const elements = document.querySelectorAll("p, li");
+
+      const elements =
+        document.querySelectorAll("p, li");
+
+
       elements.forEach((el) => {
-        const container = document.createElement("span");
-        container.className = 'speech-controls';
-        const playBtn = document.createElement("button");
-        playBtn.innerText = "🔊 Listen";
-        playBtn.onclick = () => speakText(el.textContent);
-        const pauseBtn = document.createElement("button");
-        pauseBtn.innerText = "⏸ Pause";
-        pauseBtn.onclick = pauseSpeech;
-        const resumeBtn = document.createElement("button");
-        resumeBtn.innerText = "▶ Resume";
-        resumeBtn.onclick = resumeSpeech;
+
+        const container =
+          document.createElement("span");
+
+        container.className =
+          "speech-controls";
+
+
+        const playBtn =
+          document.createElement("button");
+
+        playBtn.innerText =
+          "🔊 Listen";
+
+        playBtn.onclick =
+          () => speakText(el.textContent);
+
+
+        const pauseBtn =
+          document.createElement("button");
+
+        pauseBtn.innerText =
+          "⏸ Pause";
+
+        pauseBtn.onclick =
+          pauseSpeech;
+
+
+        const resumeBtn =
+          document.createElement("button");
+
+        resumeBtn.innerText =
+          "▶ Resume";
+
+        resumeBtn.onclick =
+          resumeSpeech;
+
+
         container.appendChild(playBtn);
+
         container.appendChild(pauseBtn);
+
         container.appendChild(resumeBtn);
-        el.parentNode.insertBefore(container, el.nextSibling);
+
+
+        el.parentNode.insertBefore(
+          container,
+          el.nextSibling
+        );
+
       });
+
     }
-    window.onload = addSpeechButtons;
+
+
+    window.onload =
+      addSpeechButtons;
+
   </script>
+
 </body>
+
 </html>
